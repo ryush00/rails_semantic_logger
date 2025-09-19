@@ -27,6 +27,9 @@ For example, adding these lines to `config/application.rb` and removing any othe
     end
 ~~~
 
+> [!IMPORTANT]
+> Do not add the config at `initializers/*.rb`. Only in `config/application.rb` and `environments/*.rb`. Otherwise you will get confused.
+
 Then configure the centralized logging system to tell it that the data is in JSON format, so that it will parse it for you into a hierarchy.
 
 For example, the following will instruct [Observe](https://www.observeinc.com/) to parse the JSON data and create machine readable data from it:
